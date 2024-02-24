@@ -13,37 +13,74 @@ import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
 import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
 import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
+import Co2 from '@mui/icons-material/Co2';
+import Factory from '@mui/icons-material/Factory';
+import LocalGasStationIcon from '@mui/icons-material/LocalGasStation';
+import PublicIcon from '@mui/icons-material/Public';
+import CalculateIcon from '@mui/icons-material/Calculate';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import WindPowerIcon from '@mui/icons-material/WindPower';
+import ExpandIcon from '@mui/icons-material/Expand';
+import RecyclingIcon from '@mui/icons-material/Recycling';
+
 
 function getItemsForPage(currentPage) {
   switch (currentPage) {
     case '/ccus':
       return [
         {
-          icon: <ViewQuiltRoundedIcon />,
-          title: 'Dashboard',
+          icon: <Co2 />,
+          title: 'What is CCUS?',
           description:
-            'This item could provide a snapshot of the most important metrics or data points related to the product.',
+            'Carbon capture, utilization, and storage is the process of capturing carbon dioxide (CO2) and store it underground',
           imageLight: 'url("/static/images/templates/templates-images/dash-light.png")',
           imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
         },
         {
-          icon: <EdgesensorHighRoundedIcon />,
-          title: 'Mobile integration',
+          icon: <Factory />,
+          title: 'How does it work?',
           description:
-            'This item could provide information about the mobile app version of the product.',
+            'Carbon emissions are captured from large industrial sources that produce significant amounts of CO2 – such as refineries, petrochemical, steel mills, power facilities and cement factories. ',
           imageLight: 'url("/static/images/templates/templates-images/mobile-light.png")',
           imageDark: 'url("/static/images/templates/templates-images/mobile-dark.png")',
         },
         {
-          icon: <DevicesRoundedIcon />,
-          title: 'Available on all platforms',
+          icon: <LocalGasStationIcon />,
+          title: 'What are the benefits? ',
           description:
-            'This item could let users know the product is available on all platforms, such as web, mobile, and desktop.',
+            'CCUS allows for the continued use of fossil fuels, such as coal and natural gas, in a more environmentally friendly manner.',
           imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
           imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
         },
       ];
     case '/co':
+      return [
+        {
+          icon: <PublicIcon />,
+          title: 'What are Carbon Offsets?',
+          description:
+            'Carbon offsets are a mechanism used to compensate for emissions of carbon dioxide (CO2) or other greenhouse gases (GHGs) by providing a reduction, avoidance, or removal of these emissions in another location. ',
+          imageLight: 'url("/static/images/templates/templates-images/dash-light.png")',
+          imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
+        },
+        {
+          icon: <CalculateIcon />,
+          title: 'How do We Calculate the Amount Needed?',
+          description:
+            'There are four main steps to calculating the amount: Measuring CO2 emissions, choosing a project, calculating offset and finally purchasing/retiring offsets.',
+          imageLight: 'url("/static/images/templates/templates-images/mobile-light.png")',
+          imageDark: 'url("/static/images/templates/templates-images/mobile-dark.png")',
+        },
+        {
+          icon: <AccessTimeIcon />,
+          title: 'How long have we been doing this for?',
+          description:
+            'Chevron’s experience in developing and using carbon offsets dates back nearly two decades. ',
+          imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
+          imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
+        },
+      ];
+    case '/pp':
       return [
         {
           icon: <ViewQuiltRoundedIcon />,
@@ -53,19 +90,31 @@ function getItemsForPage(currentPage) {
           imageLight: 'url("/static/images/templates/templates-images/dash-light.png")',
           imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
         },
+        
+      ];
+    case '/reh':
+      return [
         {
-          icon: <EdgesensorHighRoundedIcon />,
-          title: 'Mobile integration',
+          icon: <WindPowerIcon />,
+          title: 'Our Role in Hydrogen and Renewable Energy',
           description:
-            'This item could provide information about the mobile app version of the product.',
+            'Chevron believes in the value of delivering large-scale hydrogen solutions that support a lower carbon world. ',
+          imageLight: 'url("/static/images/templates/templates-images/dash-light.png")',
+          imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
+        },
+        {
+          icon: <ExpandIcon />,
+          title: 'Our Current Plans and Projects',
+          description:
+            'We are exploring profitable opportunities for growth across the value chain',
           imageLight: 'url("/static/images/templates/templates-images/mobile-light.png")',
           imageDark: 'url("/static/images/templates/templates-images/mobile-dark.png")',
         },
         {
-          icon: <DevicesRoundedIcon />,
-          title: 'Available on all platforms',
+          icon: <RecyclingIcon />,
+          title: 'Importance of Hydrogen and Renewable Energy',
           description:
-            'This item could let users know the product is available on all platforms, such as web, mobile, and desktop.',
+            'Renewable fuels are important products that can help reduce the lifecycle carbon intensity of transportation fuels while meeting the world’s growing energy needs. ',
           imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
           imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
         },
@@ -81,6 +130,7 @@ export default function Features() {
   // Use the function to set the items
   const router = useRouter();
   const items = getItemsForPage(router.pathname);
+  console.log(router.pathname);
 
   const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
 
