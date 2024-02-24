@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {useRouter} from 'next/router';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
@@ -13,34 +14,74 @@ import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
 import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
 import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
 
-const items = [
-  {
-    icon: <ViewQuiltRoundedIcon />,
-    title: 'Dashboard',
-    description:
-      'This item could provide a snapshot of the most important metrics or data points related to the product.',
-    imageLight: 'url("/static/images/templates/templates-images/dash-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
-  },
-  {
-    icon: <EdgesensorHighRoundedIcon />,
-    title: 'Mobile integration',
-    description:
-      'This item could provide information about the mobile app version of the product.',
-    imageLight: 'url("/static/images/templates/templates-images/mobile-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/mobile-dark.png")',
-  },
-  {
-    icon: <DevicesRoundedIcon />,
-    title: 'Available on all platforms',
-    description:
-      'This item could let users know the product is available on all platforms, such as web, mobile, and desktop.',
-    imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
-  },
-];
+function getItemsForPage(currentPage) {
+  switch (currentPage) {
+    case '/ccus':
+      return [
+        {
+          icon: <ViewQuiltRoundedIcon />,
+          title: 'Dashboard',
+          description:
+            'This item could provide a snapshot of the most important metrics or data points related to the product.',
+          imageLight: 'url("/static/images/templates/templates-images/dash-light.png")',
+          imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
+        },
+        {
+          icon: <EdgesensorHighRoundedIcon />,
+          title: 'Mobile integration',
+          description:
+            'This item could provide information about the mobile app version of the product.',
+          imageLight: 'url("/static/images/templates/templates-images/mobile-light.png")',
+          imageDark: 'url("/static/images/templates/templates-images/mobile-dark.png")',
+        },
+        {
+          icon: <DevicesRoundedIcon />,
+          title: 'Available on all platforms',
+          description:
+            'This item could let users know the product is available on all platforms, such as web, mobile, and desktop.',
+          imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
+          imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
+        },
+      ];
+    case '/co':
+      return [
+        {
+          icon: <ViewQuiltRoundedIcon />,
+          title: 'Lorem ipsum',
+          description:
+            '12fafs',
+          imageLight: 'url("/static/images/templates/templates-images/dash-light.png")',
+          imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
+        },
+        {
+          icon: <EdgesensorHighRoundedIcon />,
+          title: 'Mobile integration',
+          description:
+            'This item could provide information about the mobile app version of the product.',
+          imageLight: 'url("/static/images/templates/templates-images/mobile-light.png")',
+          imageDark: 'url("/static/images/templates/templates-images/mobile-dark.png")',
+        },
+        {
+          icon: <DevicesRoundedIcon />,
+          title: 'Available on all platforms',
+          description:
+            'This item could let users know the product is available on all platforms, such as web, mobile, and desktop.',
+          imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
+          imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
+        },
+      ];
+    // Add more cases as needed
+    default:
+      return []; // Default case if no page matches
+  }
+}
+
 
 export default function Features() {
+  // Use the function to set the items
+  const router = useRouter();
+  const items = getItemsForPage(router.pathname);
+
   const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
 
   const handleItemClick = (index) => {
