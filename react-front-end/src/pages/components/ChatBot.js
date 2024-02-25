@@ -23,50 +23,49 @@ const Chatbot = () => {
 
     const toggleChatWindow = () => setIsOpen(!isOpen);
 
-    const handleMessageSubmit =  () => {
+    const handleMessageSubmit = () => {
         if (!messageInput.trim()) return; // Prevent sending empty messages
-
+    
         const newMessage = { id: messages.length + 1, text: messageInput, sender: 'user' };
         setMessageInput('');
+        setMessages(prevMessages => [...prevMessages, newMessage]);
+    };
 
-        setMessages(prevMessages => {
-            const updatedMessages = [...prevMessages, newMessage];
+    const scrollToBottom = () => {
+        chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
 
-            // Encapsulate the async logic in an immediately invoked async function
-            (async () => {
+    useEffect(() => {
+        const fetchBotResponse = async (lastMessage) => {
+            if (lastMessage.sender === 'user') { // Only fetch bot response if the last message was from the user
                 try {
                     const response = await fetch('http://localhost:5000/api/submit', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
                         },
-                        body: JSON.stringify(updatedMessages),
+                        body: JSON.stringify(messages), // Send only the last user message
                     });
-
+    
                     if (!response.ok) {
                         throw new Error(`HTTP error! status: ${response.status}`);
                     }
-
-                    // Handle response data here, if needed
+    
                     const data = await response.json();
-                    console.log('Submission successful', data);
-
-                    // Add the bot's response to the messages state
-                    const botResponse = { id: updatedMessages.length + 1, text: data.data, sender: 'bot' };
-                    return [...updatedMessages, botResponse];
+                    const botResponse = { id: messages.length + 1, text: data.data, sender: 'bot' };
+    
+                    setMessages(prevMessages => [...prevMessages, botResponse]); // Update state with bot response
                 } catch (error) {
-                    console.error('Error submitting messages to backend:', error);
-                    return prevMessages; // In case of error, return the previous state
+                    console.error('Error fetching bot response:', error);
                 }
-            })();
-
-             return updatedMessages
-    });
-    };
-
-    const scrollToBottom = () => {
-        chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
-    };
+            }
+        };
+    
+        if (messages.length > 0) {
+            const lastMessage = messages[messages.length - 1];
+            fetchBotResponse(lastMessage);
+        }
+    }, [messages]);
 
     useEffect(() => {
         scrollToBottom();

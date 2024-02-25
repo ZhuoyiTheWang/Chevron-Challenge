@@ -35,7 +35,7 @@ def handleSubmit():
     print(bot_response)
 
     # Return the response
-    return jsonify({'status': 'Success', 'data': data})
+    return jsonify({'status': 'Success', 'data': bot_response})
 
 if __name__ == '__main__':
     app.run(debug=True)
