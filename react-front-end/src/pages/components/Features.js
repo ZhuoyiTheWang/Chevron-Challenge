@@ -360,18 +360,6 @@ export default function Features() {
                 pointerEvents: 'none',
               }}
             >
-              <Box
-                sx={{
-                  m: 'auto',
-                  width: 420,
-                  height: 500,
-                  backgroundSize: 'contain',
-                  backgroundImage: (theme) =>
-                    theme.palette.mode === 'light'
-                      ? items[selectedItemIndex].imageLight
-                      : items[selectedItemIndex].imageDark,
-                }}
-              />
               <Box sx={{ p: 2 }}>
                 <Typography variant="body1"  sx={{ textAlign: 'center' }}>
                   {selectedFeature.moreText}
