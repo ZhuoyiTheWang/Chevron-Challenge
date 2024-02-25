@@ -4,7 +4,7 @@ import Divider from '@mui/material/Divider';
 import Highlights from './components/Highlights';
 import Features from './components/Features';
 import FAQ from './components/FAQ';
-import ImageWithIcons from './components/ImagesWithIcons';
+import ImageWithIcons from './components/ImageWithIcons';
 
 export default function Page() {
 
