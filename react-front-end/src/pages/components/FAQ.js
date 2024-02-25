@@ -29,6 +29,7 @@ export default function FAQ() {
         gap: { xs: 3, sm: 6 },
       }}
     >
+      
       <Typography
         component="h2"
         variant="h4"

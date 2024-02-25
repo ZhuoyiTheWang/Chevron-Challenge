@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react';
 import styles from './memory.module.css';
 
 const questions = [
-  'What is CC in CCUS?', 'What is Carbon Offset?', 'How is C02 consumption reduced?', 
-  'How to reduce the life of CO2?', 'What is the depth of CO2 storage?', 'What is US in CCUS?',
-  'What is the Energy Initiative?', 'What is the company founding year?',
+  'What CC in CCUS stand for?', 'What is a Carbon Offset?', 'How is C02 consumption reduced?', 
+  'How to reduce the impact and consumption of C02?', 'What is the depth of CO2 storage?', 'What doe US in CCUS stand for?',
+  'What is the Energy Initiative?', 'What is the company\'s founding year?',
 ]
 
 const answers = [
-  'Carbon Capture', 'Removing equivalent CO2', 'Hydrogen delivery', 
-  'Renewable energy', '22 football fields', 'Utilization Storage',
-  'An MIT partner', '1879',
+  'Carbon Capture', 'Removing equivalent CO2 from atmosphere as emitted', 'By introducing Large-Scale Hydrogen Delivery', 
+  'Renewable Energy Projects', '22 football fields deep', 'Utilization and Storage',
+  'A partnership with MIT ', '1879',
 ];
 
 const shuffle = (array) => {
@@ -29,6 +29,7 @@ function MemoryGame() {
   const [moves, setMoves] = useState(0);
   const [timer, setTimer] = useState(0);
   const [gameStarted, setGameStarted] = useState(false);
+  const [winFlip, setWinFlip] = useState(false);
 
   useEffect(() => {
     let interval = null;
@@ -36,7 +37,11 @@ function MemoryGame() {
       interval = setInterval(() => {
         setTimer((prevTimer) => prevTimer + 0.1);
       }, 100);
-    } else if (!gameStarted && timer !== 0) {
+    } 
+    else if (matchedIndexes.length >= cards.length) {
+      setWinFlip(true);
+    }
+    else if (!gameStarted && timer !== 0) {
       clearInterval(interval);
     }
     return () => clearInterval(interval);
@@ -53,13 +58,14 @@ function MemoryGame() {
   
     const newFlippedIndexes = [...flippedIndexes, index];
     setFlippedIndexes(newFlippedIndexes);
-    setMoves((prevMoves) => prevMoves + 1);
   
     if (!gameStarted) {
       setGameStarted(true);
+      setWinFlip(false);
     }
   
     if (newFlippedIndexes.length === 2) {
+      setMoves((prevMoves) => prevMoves + 1);
       // Delay the logic to allow for the second card to flip
       setTimeout(() => {
         const [firstIndex, secondIndex] = newFlippedIndexes;
@@ -79,6 +85,7 @@ function MemoryGame() {
     setMoves(0);
     setTimer(0);
     setGameStarted(false);
+    setWinFlip(false);
   };
 
   return (
@@ -91,8 +98,9 @@ function MemoryGame() {
             <div className={styles.timer}>{`time: ${timer.toFixed(1)} sec`}</div>
           </div>
         </div>
-        {cards.length > matchedIndexes.length && (
-          <div className={styles.container}>
+          <div
+            className={`${styles.container} ${winFlip ? styles.flipped : ''}`}
+          >
             <div className={styles.board} style={{ gridTemplateColumns: `repeat(${Math.sqrt(cards.length / 2)}, 1fr)` }}>
               {cards.map((card, index) => (
                 <div
@@ -105,15 +113,14 @@ function MemoryGame() {
                 </div>
               ))}
             </div>
-          </div>
-        )}
-        {cards.length === matchedIndexes.length && (
-          <div className={styles.box}>
-            <div className={styles.winText}>
-              All Correct!
+            <div className={styles.win}>
+              <span className={styles.winText}>
+                All Correct! <br></br>
+                In {`${moves} moves`} <br></br>
+                And {`${timer.toFixed(1)} seconds`}
+              </span>
             </div>
           </div>
-        )}
       </div>
     </div>
   );
