@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import styles from './memory.module.css';
 
 const questions = [
-  'CC in CCUS', 'Carbon Offset', 'Reduce C02 consumption', 
-  'Reduce life of CO2', 'Depth of CO2 storage', 'US of CCUS', 'Energy Initiative', 'Company Origin',
+  'CC[US] Stands For', 'Carbon Offset', 'Reduce C02 consumption', 
+  'Reduce life of CO2', 'Depth of CO2 storage', '[CC]US Stands For', 'Energy Initiative', 'Company Founding Year',
 ];
 
 const answers = [
