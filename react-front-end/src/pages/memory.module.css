@@ -29,11 +29,12 @@
     background: #E6192F;
     color: white;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 0.7em 1em;
+    margin: 0.5em;  
     border: 0;
     cursor: pointer;
     font-family: Fredoka;
-    font-size: 18pt;
+    font-size: 12pt;
 }
 
 .disabled {
@@ -76,8 +77,8 @@
 
 .card {
     position: relative;
-    width: 200px;
-    height: 100px;
+    width: 10em;
+    height: 5em;
     cursor: pointer;
 }
 
@@ -94,10 +95,12 @@
 
 .cardBack {
     transform: rotateY(180deg) rotateZ(50deg);
-    font-size: 14pt;
+    font-size: 12pt;
     user-select: none;
     text-align: center;
-    line-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #FDF8E6;
 }
 

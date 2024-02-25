@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react';
 import styles from './memory.module.css';
 
 const questions = [
-  'CC in CCUS', 'Carbon Offset', 'Reduce C02 consumption', 
-  'Reduce life of CO2', 'Depth of CO2 storage', 'US of CCUS', 'Energy Initiative', 'Company Origin',
+  'What is CC in CCUS?', 'What is Carbon Offset?', 'How is C02 consumption reduced?', 
+  'How to reduce the life of CO2?', 'What is the depth of CO2 storage?', 'What is US in CCUS?',
+  'What is the Energy Initiative?', 'When was the company founded?',
 ];
 
 const answers = [
   'Carbon Capture', 'Removing equivalent CO2', 'Hydrogen delivery', 
-  'Renewable Energy', '22 Footbal Fields', 'Utilization+Storage', 'MIT Partner', '1879',
+  'Renewable energy', '22 football fields', 'Utilization Storage',
+  'An MIT partner', '1879',
 ];
 
 const shuffle = (array) => {
