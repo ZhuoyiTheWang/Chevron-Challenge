@@ -5,6 +5,7 @@ const questions = [
   'What is CC in CCUS?', 'What is Carbon Offset?', 'How is C02 consumption reduced?', 
   'How to reduce the life of CO2?', 'What is the depth of CO2 storage?', 'What is US in CCUS?',
   'What is the Energy Initiative?', 'What is the company founding year?',
+]
 
 const answers = [
   'Carbon Capture', 'Removing equivalent CO2', 'Hydrogen delivery', 
