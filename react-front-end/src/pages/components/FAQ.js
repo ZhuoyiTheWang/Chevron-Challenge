@@ -51,7 +51,7 @@ export default function FAQ() {
             id="panel1d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              How do I contact customer support if I have a question or issue?
+            What measures does Chevron take to ensure the long-term containment and safety of CO2 in its carbon capture and storage projects?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -60,10 +60,7 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              You can reach our customer support team by emailing
-              <Link> support@email.com </Link>
-              or calling our toll-free number. We&apos;re here to assist you
-              promptly.
+              Chevron rigorously monitors and maintains its carbon capture and storage sites to ensure the secure containment of CO2. This involves close monitoring of storage sites and effective sealing techniques to prevent any leakage, aiming to safely store CO2 underground for potentially thousands of years.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -77,7 +74,7 @@ export default function FAQ() {
             id="panel2d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              Can I return the product if it doesn&apos;t meet my expectations?
+            How is Chevron contributing to the development of hydrogen and renewable energy solutions?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -86,9 +83,7 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Absolutely! We offer a hassle-free return policy. If you&apos;re not
-              completely satisfied, you can return the product within [number of
-              days] days for a full refund or exchange.
+              Chevron is committed to delivering large-scale hydrogen solutions to support a lower carbon world. The company is building a profitable, large-scale, lower carbon hydrogen business, leveraging its existing assets, capabilities, and customer base. It is exploring opportunities across the hydrogen value chain, from production to distribution, and is actively involved in renewable fuels, including bio feedstock co-processing, renewable natural gas (RNG), and compressed natural gas (CNG).
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -102,7 +97,7 @@ export default function FAQ() {
             id="panel3d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              What makes your product stand out from others in the market?
+            What are Chevron’s strategies for carbon offsets, and how do they contribute to greenhouse gas reduction?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -111,9 +106,7 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Our product distinguishes itself through its adaptability, durability,
-              and innovative features. We prioritize user satisfaction and
-              continually strive to exceed expectations in every aspect.
+              Chevron has a comprehensive approach to carbon offsets. It involves identifying the greenhouse gases emitted by the company and investing in projects that reduce or remove an equivalent amount of these gases from the atmosphere. Chevron’s carbon offset strategy includes investing in nature-based solutions like soil carbon storage, reforestation, and mangrove restoration, and it has a dedicated global carbon trading organization.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -127,7 +120,7 @@ export default function FAQ() {
             id="panel4d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              Is there a warranty on the product, and what does it cover?
+            Can you describe Chevron's international outreach efforts in achieving a lower carbon future?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -136,10 +129,7 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Yes, our product comes with a [length of warranty] warranty. It covers
-              defects in materials and workmanship. If you encounter any issues
-              covered by the warranty, please contact our customer support for
-              assistance.
+              Chevron believes in achieving a lower carbon future through collaboration. The company is actively engaged in partnerships with innovators, policymakers, partners, and customers to address the needs of essential industries. Chevron's outreach focuses on providing cleaner, affordable, and reliable energy while working towards reducing carbon emissions globally.
             </Typography>
           </AccordionDetails>
         </Accordion>
