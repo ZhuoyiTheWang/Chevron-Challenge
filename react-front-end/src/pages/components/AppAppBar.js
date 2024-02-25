@@ -74,7 +74,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                 px: 0,
               }}
             >
-              <img
+              <img onClick={() => navigateTo('/')}
                 src={
                   'https://1000logos.net/wp-content/uploads/2017/12/Chevron-Logo.png'
                 }
