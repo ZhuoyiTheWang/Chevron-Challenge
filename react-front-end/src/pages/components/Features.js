@@ -98,6 +98,28 @@ function getItemsForPage(currentPage) {
           imageLight: 'url("/static/images/templates/templates-images/dash-light.png")',
           imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
         },
+        {
+          icon: <ViewQuiltRoundedIcon />,
+          title: 'Many Multi-Country Collaborations',
+          description:
+            'Some of our projects have no definite home, since they involve multiple organizations and areas.',
+          moreText: `BNSF and Caterpillar: Announced a memorandum of understanding to advance the demonstration of a locomotive powered by hydrogen fuel cells. 
+
+          Cummins: Announced a memorandum of understanding with BNSF and Caterpillar to explore a strategic alliance for commercially viable business opportunities in hydrogen and other alternative energy sources. 
+         
+          Angelicoussis: Announced a Joint Study Agreement (JSA) to explore how tankers can be used to transport ammonia, a potential lower carbon marine fuel. The initial study will evaluate the ammonia transportation market, existing infrastructure, the safety aspects of ammonia, potential next generation vessel requirements and a preliminary system to transport ammonia between the U.S. Gulf Coast and Europe. Ammonia is a carrier of hydrogen and is believed to have potential to lower the carbon intensity of the marine industry. 
+          
+          Institute of International Finance Taskforce on Scaling Voluntary Carbon Markets: Serving as a consultative group member of the Institute of International Finance Taskforce on Scaling Voluntary Carbon Markets (TSVCM). A large, transparent, verifiable and robust voluntary carbon market can help deliver carbon-reduction goals and is key to the integrity of reductions. 
+          
+          Markets for Natural Climate Solutions Initiative: As a founding member, serving in the Markets for Natural Climate Solutions Initiative to boost climate action. NCS provides a potentially cost-effective form of carbon management that can contribute to the goals of the Paris Agreement. 
+          
+          Oil and Gas Climate Initiative: Participating in the OGCI’s Natural Climate Solutions workstream, exploring ways to enhance the scientific, technological and operational basis for a global scaling up of natural climate solutions (NCSs). 
+          
+          World Bank: Participating in a memorandum of understanding with the World Bank. The World Bank’s goal is to enhance global climate ambitions in mitigation actions and activities to facilitate the development of carbon and climate markets and associated infrastructure based on emerging international and national regulatory frameworks. `
+          ,
+          imageLight: 'url("/static/images/templates/templates-images/dash-light.png")',
+          imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
+        },
         
       ];
     case '/reh':
@@ -361,7 +383,7 @@ export default function Features() {
               }}
             >
               <Box sx={{ p: 2 }}>
-                <Typography variant="body1"  sx={{ textAlign: 'center' }}>
+                <Typography variant="body1" sx={{ textAlign: 'center', whiteSpace: 'pre-line' }}>
                   {selectedFeature.moreText}
                 </Typography>
               </Box>
