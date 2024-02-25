@@ -29,7 +29,7 @@ function MemoryGame() {
 
   useEffect(() => {
     let interval = null;
-    if (gameStarted) {
+    if (gameStarted && matchedIndexes.length < cards.length) {
       interval = setInterval(() => {
         setTimer((prevTimer) => prevTimer + 0.1);
       }, 100);
@@ -38,6 +38,10 @@ function MemoryGame() {
     }
     return () => clearInterval(interval);
   }, [gameStarted, timer]);
+
+  useEffect(() => {
+    setCards(shuffle([...questions, ...answers]));
+  }, [])
 
   const flipCard = (index) => {
     if (flippedIndexes.length === 2 || flippedIndexes.includes(index) || matchedIndexes.includes(index)) {
@@ -101,12 +105,10 @@ function MemoryGame() {
           </div>
         )}
         {cards.length === matchedIndexes.length && (
-          <div className={styles.win}>
-            <span className={styles.winText}>
-              All correct!<br />
-              in <span className={styles.highlight}>{moves}</span> moves<br />
-              at <span className={styles.highlight}>{timer.toFixed(1)}</span> seconds
-            </span>
+          <div className={styles.box}>
+            <div className={styles.winText}>
+              All Correct!
+            </div>
           </div>
         )}
       </div>
