@@ -2,3 +2,5 @@
 
 # dependencies
 /node_modules
+flask-back-end/.venv
+flask-back-end/.env

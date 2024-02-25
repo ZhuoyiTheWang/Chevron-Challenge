@@ -23,17 +23,45 @@ const Chatbot = () => {
 
     const toggleChatWindow = () => setIsOpen(!isOpen);
 
-    const handleMessageSubmit = () => {
+    const handleMessageSubmit =  () => {
         if (!messageInput.trim()) return; // Prevent sending empty messages
 
         const newMessage = { id: messages.length + 1, text: messageInput, sender: 'user' };
-        setMessages([...messages, newMessage]);
+        setMessageInput('');
 
-        setMessageInput('')
+        setMessages(prevMessages => {
+            const updatedMessages = [...prevMessages, newMessage];
 
-        // Simulate a bot response
-        const botResponse = { id: messages.length + 2, text: "I'm a bot response!", sender: 'bot' };
-        setMessages((prevMessages) => [...prevMessages, botResponse]);
+            // Encapsulate the async logic in an immediately invoked async function
+            (async () => {
+                try {
+                    const response = await fetch('http://localhost:5000/api/submit', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(updatedMessages),
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+
+                    // Handle response data here, if needed
+                    const data = await response.json();
+                    console.log('Submission successful', data);
+
+                    // Add the bot's response to the messages state
+                    const botResponse = { id: updatedMessages.length + 1, text: data.data, sender: 'bot' };
+                    return [...updatedMessages, botResponse];
+                } catch (error) {
+                    console.error('Error submitting messages to backend:', error);
+                    return prevMessages; // In case of error, return the previous state
+                }
+            })();
+
+             return updatedMessages
+    });
     };
 
     const scrollToBottom = () => {
