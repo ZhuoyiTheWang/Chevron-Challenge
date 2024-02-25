@@ -1,23 +1,8 @@
-# Example Template
+# Chevron New Energies Interactive Learning Hub
 
-The introduction summarizes the purpose and function of the project, and should be concise (a brief paragraph or two). This introduction may be the same as the first paragraph on the project page.
+## Objective
 
-For a full description of the module, visit the
-[project page](https://www.drupal.org/project/admin_menu).
-
-Submit bug reports and feature suggestions, or track changes in the
-[issue queue](https://www.drupal.org/project/issues/admin_menu).
-
-
-## Table of contents (optional)
-
-- Requirements
-- Recommended modules
-- Installation
-- Configuration
-- Troubleshooting
-- FAQ
-- Maintainers
+Our project aims to create a compelling educational platform for young adults in high school and college, enhancing their understanding of the current and prospective energy landscape. The tool focuses on elucidating the significance, advantages, and functions of emergent energy technologies, particularly those emphasized by Chevron New Energies, such as carbon capture, utilization, and storage (CCUS), hydrogen, renewable fuels and products, and carbon offsets. Additionally, the platform encompasses a broader spectrum of energy sources and technologies.
 
 
 ## Requirements (required)
