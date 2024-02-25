@@ -180,8 +180,9 @@ export default function Page() {
       <Divider />
       <Divider />
       <Divider />
-      
+
       <WorldMapWithIcons />
+
       <Divider />
       <FAQ />
     </Box>
