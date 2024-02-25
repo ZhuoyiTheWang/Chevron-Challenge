@@ -28,6 +28,7 @@
 
 .chatBody {
     padding: 10px;
+    max-height: 300px;
     overflow-y: auto;
 }
 
@@ -58,4 +59,13 @@
 .message.bot {
     background-color: #f1f1f1;
     color: black;
+}
+
+.textareaAutosize {
+    resize: none; /* Allows only vertical resizing */
+    overflow: hidden; /* Prevents scrollbars from appearing */
+    width: 100%; /* Ensures it fits the width of the container */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    padding: 10px; /* Adjust padding as needed */
+    border: 1px solid #ccc; /* Just for styling, adjust as needed */
 }
