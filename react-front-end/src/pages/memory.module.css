@@ -78,7 +78,7 @@
 
 .card {
     position: relative;
-    width: 10em;
+    width: 11em;
     height: 5em;
     cursor: pointer;
 }
@@ -96,7 +96,7 @@
 
 .cardBack {
     transform: rotateY(180deg) rotateZ(50deg);
-    font-size: 12pt;
+    font-size: 11pt;
     user-select: none;
     text-align: center;
     display: flex;

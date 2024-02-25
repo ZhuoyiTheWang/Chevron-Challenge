@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import styles from './memory.module.css';
 
 const questions = [
-  'What CC in CCUS stand for?', 'What is a Carbon Offset?', 'How is C02 consumption reduced?', 
-  'How to reduce the impact and consumption of C02?', 'What is the depth of CO2 storage?', 'What doe US in CCUS stand for?',
+  'What does CC in CCUS stand for?', 'What is a Carbon Offset?', 'How is C02 consumption reduced?', 
+  'How to reduce the impact and consumption of C02?', 'What is the depth of CO2 storage?', 'What does US in CCUS stand for?',
   'What is the Energy Initiative?', 'What is the company\'s founding year?',
 ]
 
