@@ -4,6 +4,7 @@ import Input from '@mui/material/Input';
 import styles from './chatbot.module.css';
 import SendIcon from '@mui/icons-material/Send';
 import IconButton  from '@mui/material/IconButton';
+import TextareaAutosize from '@mui/material/TextareaAutosize';
 
 const Chatbot = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -43,11 +44,20 @@ const Chatbot = () => {
                     ))}
                 </div>
                 <div className={styles.chatFooter}>
-                    <Input color="secondary" 
-                    placeholder="Type a message..." 
-                    className={styles.inputGrow}
+                    <TextareaAutosize
+                    minRows={1}
+                    maxRows={2} // Set the maximum number of rows you want the textarea to grow
+                    className={styles.textareaAutosize}
+                    placeholder="Type a message..."
+                    style={{ width: '100%', padding: '10px' }} // Adjust the styling as needed
+                    value={messageInput}
+                    onKeyPress={(e) => {
+                        if (e.key === 'Enter' && !e.shiftKey){
+                            e.preventDefault();
+                            handleMessageSubmit();
+                        }}}
                     onChange={(e) => setMessageInput(e.target.value)}
-                    onKeyPress={(e) => e.key === 'Enter' && handleMessageSubmit()}></Input>
+                    />
                     <IconButton onClick={() => handleMessageSubmit()}>
                         <SendIcon/>
                     </IconButton>
