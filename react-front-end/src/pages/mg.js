@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import styles from './memory.module.css';
 
 const questions = [
-  'What is 1+1', 'What is 1+2', 'What is 1+3', 'What is 1+4',
-  'What is 1+5', 'What is 1+6', 'What is 1+7', 'What is 1+8',
+  'CC in CCUS', 'Carbon Offset', 'Reduce C02 consumption', 
+  'Reduce life of CO2', 'Depth of CO2 storage', 'US of CCUS', 'Energy Initiative', 'Company Origin',
 ];
 
 const answers = [
-  '2', '3', '4', '5', '6', '7', '8', '9',
+  'Carbon Capture', 'Removing equivalent CO2', 'Hydrogen delivery', 
+  'Renewable Energy', '22 Footbal Fields', 'Utilization+Storage', 'MIT Partner', '1879',
 ];
 
 const shuffle = (array) => {
