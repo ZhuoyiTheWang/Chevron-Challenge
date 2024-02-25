@@ -14,8 +14,8 @@ export default function Page() {
       <Features />
       <ImageWithIcons />
       <Divider />
-      <Highlights />
-      <Divider />
+
+
       <FAQ />
     </Box>
     </>

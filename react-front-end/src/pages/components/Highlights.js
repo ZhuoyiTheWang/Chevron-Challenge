@@ -11,43 +11,50 @@ import QueryStatsRoundedIcon from '@mui/icons-material/QueryStatsRounded';
 import SettingsSuggestRoundedIcon from '@mui/icons-material/SettingsSuggestRounded';
 import SupportAgentRoundedIcon from '@mui/icons-material/SupportAgentRounded';
 import ThumbUpAltRoundedIcon from '@mui/icons-material/ThumbUpAltRounded';
+import Co2Icon from '@mui/icons-material/Co2';
+import PowerIcon from '@mui/icons-material/Power';
+import SolarPowerIcon from '@mui/icons-material/SolarPower';
+import ForestIcon from '@mui/icons-material/Forest';
+import SchoolIcon from '@mui/icons-material/School';
+import HandshakeIcon from '@mui/icons-material/Handshake';
+
 
 const items = [
   {
-    icon: <SettingsSuggestRoundedIcon />,
-    title: 'Adaptable performance',
+    icon: <Co2Icon />,
+    title: 'Carbon capture, utilization, and storage (CCUS) ',
     description:
-      'Our product effortlessly adjusts to your needs, boosting efficiency and simplifying your tasks.',
+      'Enabler of global net zero and our commitment to accelerate progress toward the lower carbon ambitions of our customers and company.',
   },
   {
-    icon: <ConstructionRoundedIcon />,
-    title: 'Built to last',
+    icon: <PowerIcon />,
+    title: 'Hydrogen',
     description:
-      'Experience unmatched durability that goes above and beyond with lasting investment.',
+      'Chevron believes in the value of delivering large-scale hydrogen solutions that support a lower carbon world. ',
   },
   {
-    icon: <ThumbUpAltRoundedIcon />,
-    title: 'Great user experience',
+    icon: < SolarPowerIcon/>,
+    title: 'Renewable Energy',
     description:
-      'Integrate our product into your routine with an intuitive and easy-to-use interface.',
+      'We are responsive to our customers who will increasingly need renewable fuels and products like renewable natural gas, hydrogen, renewable diesel, sustainable aviation fuel and renewable base oils and lubricants.',
   },
   {
-    icon: <AutoFixHighRoundedIcon />,
-    title: 'Innovative functionality',
+    icon: <ForestIcon />,
+    title: 'Carbon Offsets',
     description:
-      'Stay ahead with features that set new standards, addressing your evolving needs better than the rest.',
+      'Carbon offsets are expected to play an important role in global carbon reductions, especially in sectors that do not have cost-effective reduction opportunities or for activities where emissions are harder to abate.',
   },
   {
-    icon: <SupportAgentRoundedIcon />,
-    title: 'Reliable support',
+    icon: <SchoolIcon />,
+    title: 'Emerging Technologies',
     description:
-      'Count on our responsive customer support, offering assistance that goes beyond the purchase.',
+      'Chevron has a long history of identifying and driving innovation through investments in emerging technologies, research and development, and university partnerships.',
   },
   {
-    icon: <QueryStatsRoundedIcon />,
-    title: 'Precision in every detail',
+    icon: <HandshakeIcon />,
+    title: 'Global Partnerships',
     description:
-      'Enjoy a meticulously crafted product where small touches make a significant impact on your overall experience.',
+      'We believe investing in multiple projects around the world and collaborating with other companies is one of the best ways to better serve our community.',
   },
 ];
 
@@ -78,12 +85,10 @@ export default function Highlights() {
           }}
         >
           <Typography component="h2" variant="h4">
-            Highlights
+            Our Focuses
           </Typography>
           <Typography variant="body1" sx={{ color: 'grey.400' }}>
-            Explore why our product stands out: adaptability, durability,
-            user-friendly design, and innovation. Enjoy reliable customer support and
-            precision in every detail.
+            Explore our current and past goals to improve the service we provide our customers with
           </Typography>
         </Box>
         <Grid container spacing={2.5}>
