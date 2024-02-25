@@ -12,32 +12,42 @@ We have engineered a web application that integrates React for the frontend and 
 
 ### Key Features
 
--Informative Pages: Each page hosts a wealth of knowledge on new energy sources, detailed with visuals and interactive elements to facilitate learning.
--Chatbot: A sophisticated chatbot powered by the OpenAI API is available to answer queries regarding new energies, thus making the learning process interactive and responsive.
--Memory Game: To augment engagement and solidify knowledge retention, a memory game is integrated into the platform. This feature is designed to be fun and educational, with the potential to offer prizes that incentivize participation.
+- **Informative Pages**: Each page hosts a wealth of knowledge on new energy sources, detailed with visuals and interactive elements to facilitate learning.
+- **Chatbot**: A sophisticated chatbot powered by the OpenAI API is available to answer queries regarding new energies, thus making the learning process interactive and responsive.
+- **Memory Game**: To augment engagement and solidify knowledge retention, a memory game is integrated into the platform. This feature is designed to be fun and educational, with the potential to offer prizes that incentivize participation.
 
 ## Installation
 
+### Prerequisites
+- Node.js (v18 or later)
+- Python (v3.8 or later)
+- React
+- Next.js
+- pip (Python package installer)
+- Materials UI
+- flask
+- flask-CORS
+- python-dotenv
+- openai
+- react-dom
 
+### Frontend Setup
+1. Navigate to the react-front-end directory
+1. Install dependencies with _npm install_
+1. Build the application with _npm run build_
+1. Run the application with _npm start_
 
+### Backend Setup
+1. Navigate the flask-back-end directory
+1. Create a python virtual environment _python -m venv venv_
+1. Start the virutal environment
+1. Install dependencies with _pip install_
+1. Obtain an OpenAI API key and store it in a file name _.env_ in the following format: 'OPENAI_API_KEY=***'
+1. Run the application with _python app.py_
 
+## Usage
+- **Homepage**: Access the homepage by navigating to localhost:3000 after starting the React application.
+- **Learning Pages**: Click on the tabs for CCUS, Renewable Energy and Hydrogen, Carbon Offsets, and Partnerships to learn about each topic.
+- **Chatbot**: Interact with the chatbot by clicking on the 'Chevron Help Bot' button and typing in your questions.
+- **Memory Game**: Click on the 'Memory Game' tab to start the game and test your knowledge on new energy technologies.
 
-## Configuration (required)
-
-1. Enable the module at Administration > Extend.
-1. Profit.
-
-
-## Troubleshooting (optional)
-
-
-## FAQ (optional)
-
-**Q: How do I write a module README?**
-
-**A:** Follow this template. It's fun and easy!
-
-
-## Maintainers (optional)
-
-- Dries Buytaert - [dries](https://www.drupal.org/u/dries)
