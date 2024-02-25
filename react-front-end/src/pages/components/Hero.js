@@ -69,10 +69,7 @@ export default function Hero() {
             alignSelf: 'center',
             height: { xs: 200, sm: 700 },
             width: '100%',
-            backgroundImage:
-              theme.palette.mode === 'light'
-                ? 'url("/static/images/templates/templates-images/hero-light.png")'
-                : 'url("/static/images/templates/templates-images/hero-dark.png")',
+            backgroundImage: 'url("https://img.freepik.com/premium-photo/figure-sketch-nuclear-power-plant-generative-ai_384720-2143.jpg?w=1380")',
             backgroundSize: 'cover',
             borderRadius: '10px',
             outline: '1px solid',
