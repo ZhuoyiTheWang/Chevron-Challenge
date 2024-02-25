@@ -12,7 +12,6 @@ export default function Page() {
     <Box sx={{ bgcolor: 'background.default' }}>
       <Features />
       <Divider />
-      <Highlights />
       <Divider />
       <FAQ />
     </Box>
