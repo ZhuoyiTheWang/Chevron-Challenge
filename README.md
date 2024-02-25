@@ -5,23 +5,21 @@
 Our project aims to create a compelling educational platform for young adults in high school and college, enhancing their understanding of the current and prospective energy landscape. The tool focuses on elucidating the significance, advantages, and functions of emergent energy technologies, particularly those emphasized by Chevron New Energies, such as carbon capture, utilization, and storage (CCUS), hydrogen, renewable fuels and products, and carbon offsets. Additionally, the platform encompasses a broader spectrum of energy sources and technologies.
 
 
-## Requirements (required)
+## Solution Overview
 
-This module requires the following modules:
-
-- [Bad judgement](https://www.drupal.org/project/bad_judgement)
-
-OR
-
-This module requires no modules outside of Drupal core.
+We have engineered a web application that integrates React for the frontend and Flask for the backend. The application provides an informative yet interactive experience, with detailed pages on various new energy technologies.
 
 
-## Recommended modules (optional)
+### Key Features
+
+-Informative Pages: Each page hosts a wealth of knowledge on new energy sources, detailed with visuals and interactive elements to facilitate learning.
+-Chatbot: A sophisticated chatbot powered by the OpenAI API is available to answer queries regarding new energies, thus making the learning process interactive and responsive.
+-Memory Game: To augment engagement and solidify knowledge retention, a memory game is integrated into the platform. This feature is designed to be fun and educational, with the potential to offer prizes that incentivize participation.
+
+## Installation
 
 
-## Installation (required, unless a separate INSTALL.md is provided)
 
-Install as you would normally install a contributed Drupal module. For further information, see [Installing Drupal Modules](https://www.drupal.org/docs/extending-drupal/installing-drupal-modules).
 
 
 ## Configuration (required)
