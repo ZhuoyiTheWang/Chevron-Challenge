@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useState } from 'react';
 import {useRouter} from 'next/router';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -11,8 +10,6 @@ import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
-import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
-import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
 import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
 import Co2 from '@mui/icons-material/Co2';
 import Factory from '@mui/icons-material/Factory';
@@ -154,7 +151,12 @@ function getItemsForPage(currentPage) {
       ];
     // Add more cases as needed
     default:
-      return []; // Default case if no page matches
+      return [{icon: <Co2 />,
+      title: '',
+      moreText: '',
+      description:'',
+      imageLight: '',
+      imageDark: '',}]; // Default case if no page matches
   }
 }
 
